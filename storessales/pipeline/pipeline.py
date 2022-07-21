@@ -30,10 +30,10 @@ class pipeline:
 
     def data_transformations(self):
         pass
-    def start_model_trainer(self)
+    def start_model_trainer(self):
         pass
 
-    def start_model_evaluation(self)
+    def start_model_evaluation(self):
         pass
 
 
