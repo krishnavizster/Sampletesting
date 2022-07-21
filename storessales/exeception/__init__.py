@@ -28,7 +28,7 @@ class StoressalesExeception(Exception):
 
         return error_message
 
-    def __str__(self)
+    def __str__(self):
         return self.error_message
 
 

@@ -1,6 +1,6 @@
 from storessales.entity.config_entity import DataIngestionConfig
 import sys,os
-from storessales.exception import StoressalesException
+from storessales.exeception import StoressalesException
 from storessales import logger
 from storessales.logger import logging
 from storessales.entity.artifact_entity import DataIngestionArtifact
@@ -23,7 +23,7 @@ class DataIngestion:
             raise StoressalesException(e,sys)
 
     
-    def download_housing_data(self,) -> str:
+    def download_storessales_data(self,) -> str:
         try:
             #extraction remote url to download dataset
             download_url = self.data_ingestion_config.dataset_download_url
