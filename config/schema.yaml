@@ -26,7 +26,7 @@ Outlet_Identifier:object
 Outlet_Size:object 
 Outlet_Location_Type:object 
 Outlet_Type:object 
-
+stores:Category 
 
 target_column:   Item_Outlet_Sales:float64
 

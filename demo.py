@@ -1,7 +1,7 @@
 from cmath import pi
 import logging
 from sklearn import pipeline
-from storessales.pipeline.pipeline import pipeline
+from storessales.pipeline import pipeline
 from storessales.exeception import StoressalesExeception
 
 

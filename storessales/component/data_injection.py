@@ -1,6 +1,6 @@
 from storessales.entity.config_entity import DataIngestionConfig
 import sys,os
-from storessales.exeception import StoressalesException
+from storessales.exeception import StoressalesExeception
 from storessales import logger
 from storessales.logger import logging
 from storessales.entity.artifact_entity import DataIngestionArtifact
@@ -20,7 +20,7 @@ class DataIngestion:
             self.data_ingestion_config = data_ingestion_config
 
         except Exception as e:
-            raise StoressalesException(e,sys)
+            raise StoressalesExeception(e,sys)
 
     
     def download_storessales_data(self,) -> str:
@@ -47,7 +47,7 @@ class DataIngestion:
             return tgz_file_path
 
         except Exception as e:
-            raise StoressalesException(e,sys) from e
+            raise StoressalesExeception(e,sys) from e
     
 
 
@@ -67,7 +67,7 @@ class DataIngestion:
             logging.info(f"Extraction completed")
 
         except Exception as e:
-            raise StoressalesException(e,sys) from e
+            raise StoressalesExeception(e,sys) from e
     
     def split_data_as_train_test(self) -> DataIngestionArtifact:
         try:
@@ -124,7 +124,7 @@ class DataIngestion:
             return data_ingestion_artifact
 
         except Exception as e:
-            raise StoressalesException(e,sys) from e
+            raise StoressalesExeception(e,sys) from e
 
         
     def initiate_data_ingestion(self)-> DataIngestionArtifact:
@@ -133,7 +133,7 @@ class DataIngestion:
             self.extract_tgz_file(tgz_file_path=tgz_file_path)
             return self.split_data_as_train_test()
         except Exception as e:
-            raise StoressalesException(e,sys) from e
+            raise StoressalesExeception(e,sys) from e
     
 
 

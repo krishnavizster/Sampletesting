@@ -1,7 +1,7 @@
 from storessales.config.configuration import Configuartion
 from storessales.entity.config_entity import DataIngestionConfig
 
-from storessales.component.data_ingestion import DataIngestion
+from storessales.component.data_injection import DataIngestion
 import os, sys
 
 from storessales.exeception import StoressalesExeception
