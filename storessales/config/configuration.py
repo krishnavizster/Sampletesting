@@ -71,7 +71,7 @@ class Configuartion:
             raise StoressalesExeception(e,sys) from e
 
 
-    def get_data_validation_config(self) -> DataValidationConfig:
+   # def get_data_validation_config(self) -> DataValidationConfig:
         try:
             artifact_dir = self.training_pipeline_config.artifact_dir
 

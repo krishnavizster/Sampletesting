@@ -32,6 +32,6 @@ class StoressalesExeception(Exception):
         return self.error_message
 
 
-    def __str__(self) -> str:
+    def __repr__(self) -> str:
 
         return StoressalesExeception.__name__.str()

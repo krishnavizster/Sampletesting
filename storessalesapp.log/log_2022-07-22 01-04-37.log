@@ -1,0 +1,2 @@
+[2022-07-22 01:04:37,957] INFO 130 configuration.py get_training_pipeline_config() Training pipleine config: TrainingPipelineConfig(artifact_dir='D:\\Storessalesproject\\storessales\\artifact')
+[2022-07-22 01:04:37,957] ERROR 16 demo.py main() local variable 'pipeline' referenced before assignment

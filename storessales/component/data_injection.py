@@ -32,7 +32,7 @@ class DataIngestion:
             tgz_download_dir = self.data_ingestion_config.tgz_download_dir
             
 
-            if os.pathexists(tgz_download_dir):
+            if os.path.exists(tgz_download_dir):
                 os.remove(tgz_download_dir)
 
             os.makedirs(tgz_download_dir,exist_ok=True)
@@ -67,6 +67,7 @@ class DataIngestion:
             logging.info(f"Extraction completed")
 
         except Exception as e:
+            
             raise StoressalesExeception(e,sys) from e
     
     def split_data_as_train_test(self) -> DataIngestionArtifact:
@@ -129,10 +130,11 @@ class DataIngestion:
         
     def initiate_data_ingestion(self)-> DataIngestionArtifact:
         try:
-            tgz_file_path =  self.download_housing_data()
+            tgz_file_path =  self.download_storessales_data()
             self.extract_tgz_file(tgz_file_path=tgz_file_path)
             return self.split_data_as_train_test()
         except Exception as e:
+
             raise StoressalesExeception(e,sys) from e
     
 

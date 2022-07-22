@@ -1,0 +1,2 @@
+[2022-07-22 01:06:34,729] INFO 130 configuration.py get_training_pipeline_config() Training pipleine config: TrainingPipelineConfig(artifact_dir='D:\\Storessalesproject\\storessales\\artifact')
+[2022-07-22 01:06:34,730] ERROR 16 demo.py main() 'module' object is not callable

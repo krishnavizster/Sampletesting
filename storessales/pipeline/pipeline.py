@@ -44,7 +44,8 @@ class pipeline:
             data_ingestion=DataIngestion(data_ingestion_config=self.config.get_data_ingestion_config())
             return data_ingestion.initiate_data_ingestion()
         except Exception as e:
-                raise StoressalesExeception(e,sys) from e
+
+            raise StoressalesExeception(e,sys) from e
 
 
 
@@ -68,4 +69,5 @@ class pipeline:
             #data_ingestion
             data_ingestion_artifact=self.start_data_ingestion()
         except Exception as e:
+            
             raise StoressalesExeception(e,sys) from e
