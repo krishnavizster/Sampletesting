@@ -3,7 +3,7 @@ training_pipeline_config:
   artifact_dir: artifact
 
 data_ingestion_config:
-  dataset_download_url: https://github.com/krishnavizster/storessalesdata/blob/main/Train.rar
+  dataset_download_url: https://github.com/krishnavizster/storessalesdata/blob/main/Stores%20_Sales_Prediction_data.zip
   raw_data_dir: raw_data
   tgz_download_dir: tgz_data
   ingested_dir: ingested_data
