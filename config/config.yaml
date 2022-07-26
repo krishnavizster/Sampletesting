@@ -3,14 +3,14 @@ training_pipeline_config:
   artifact_dir: artifact
 
 data_ingestion_config:
-  dataset_download_url: https://github.com/krishnavizster/storessalesdata/blob/main/Stores%20_Sales_Prediction_data.zip
-  raw_data_dir: raw_data
-  tgz_download_dir: tgz_data
+  dataset_download_url: https://github.com/krishnavizster/storessalesdata/raw/main/storessalesdata.csv
+  #raw_data_dir: raw_data
+  csv_download_dir: csv_data
   ingested_dir: ingested_data
   ingested_train_dir: train
   ingested_test_dir: test 
 
-
+#
 
 
 data_validation_config:
@@ -30,7 +30,7 @@ data_transformation_config:
 model_trainer_config:
   trained_model_dir: trained_model
   model_file_name: model.pkl
-  base_accuracy: 0.6
+  base_accuracy: 0.5
   model_config_dir: config
   model_config_file_name: model.yaml
 

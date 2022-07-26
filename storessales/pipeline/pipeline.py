@@ -62,8 +62,6 @@ class pipeline:
     def start_model_evaluation(self):
         pass
 
-
-
     def run_pipeline(self):
         try:
             #data_ingestion

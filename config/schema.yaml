@@ -1,23 +1,14 @@
 columns:
 
- 
   Item_Weight:float64
- 
   Item_Visibility:float64
-   
   Item_MRP:float64
   
-   
-  
-
-
 numerical_columns:
-  
 
 Outlet_Establishment_Year:int64 
 
 categorical_columns:
-
 
 Item_Identifier:object 
 Item_Fat_Content:object
@@ -32,8 +23,8 @@ target_column:   Item_Outlet_Sales:float64
 
 domain_value:
   stores:
-    - STORE ID
-    - LOW STORE
-    - MEDIUM STORE
-    - HIGH STORE
+    - Tire 1
+    - Tire 2
+    - Tire 3
+    - Tire 4
     - GROCERY STORE OR SUPERMARKET 
