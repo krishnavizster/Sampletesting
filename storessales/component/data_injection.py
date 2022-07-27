@@ -135,6 +135,4 @@ class DataIngestion:
     def __del__(self):
         logging.info(f"{'>>'*20}Data Ingestion log completed.{'<<'*20} \n\n")
 
-#import pandas as pd
-#df=pd.read_csv("https://raw.githubusercontent.com/krishnavizster/storessalesdata/main/storessalesdata.csv")
-#print(df.head)       
+    
