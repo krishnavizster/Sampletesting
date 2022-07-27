@@ -3,14 +3,14 @@ training_pipeline_config:
   artifact_dir: artifact
 
 data_ingestion_config:
-  dataset_download_url: https://github.com/krishnavizster/storessalesdata/raw/main/storessalesdata.csv
-  #raw_data_dir: raw_data
-  csv_download_dir: csv_data
+  dataset_download_url: https://github.com/krishnavizster/storedatatgz/blob/main/storessalesdata.tgz
+  raw_data_dir: raw_data
+  tgz_download_dir: tgz_data
   ingested_dir: ingested_data
   ingested_train_dir: train
   ingested_test_dir: test 
 
-#
+
 
 
 data_validation_config:
@@ -20,7 +20,7 @@ data_validation_config:
   report_page_file_name: report.html
 
 data_transformation_config:
-
+  add_Years_Established: true
   transformed_dir: transformed_data
   transformed_train_dir: train
   transformed_test_dir: test
@@ -30,7 +30,7 @@ data_transformation_config:
 model_trainer_config:
   trained_model_dir: trained_model
   model_file_name: model.pkl
-  base_accuracy: 0.5
+  base_accuracy: 0.6
   model_config_dir: config
   model_config_file_name: model.yaml
 

@@ -1,2 +1,0 @@
-[2022-07-22 01:05:51,131] INFO 130 configuration.py get_training_pipeline_config() Training pipleine config: TrainingPipelineConfig(artifact_dir='D:\\Storessalesproject\\storessales\\artifact')
-[2022-07-22 01:05:51,132] ERROR 16 demo.py main() module 'storessales.pipeline.pipeline' has no attribute 'run_pipeline'
