@@ -53,7 +53,7 @@ DATA_VALIDATION_REPORT_PAGE_FILE_NAME_KEY = "report_page_file_name"
 # Data Transformation related variables
 DATA_TRANSFORMATION_ARTIFACT_DIR = "data_transformation"
 DATA_TRANSFORMATION_CONFIG_KEY = "data_transformation_config"
-DATA_TRANSFORMATION_ADD_BEDROOM_PER_ROOM_KEY = "add_bedroom_per_room"
+DATA_TRANSFORMATION_ADD_ESTABLISHED_YEAR_KEY = "add_years_established"
 DATA_TRANSFORMATION_DIR_NAME_KEY = "transformed_dir"
 DATA_TRANSFORMATION_TRAIN_DIR_NAME_KEY = "transformed_train_dir"
 DATA_TRANSFORMATION_TEST_DIR_NAME_KEY = "transformed_test_dir"
@@ -62,18 +62,37 @@ DATA_TRANSFORMATION_PREPROCESSED_FILE_NAME_KEY = "preprocessed_object_file_name"
 
 
 
-COLUMN_TOTAL_ROOMS = "total_rooms"
-COLUMN_POPULATION = "population"
-COLUMN_HOUSEHOLDS = "households"
-COLUMN_TOTAL_BEDROOM = "total_bedrooms"
+COLUMN_ESTABLISHED_YEAR = "years_established"  #'Item_Identifier','Outlet_Identifier','Outlet_Establishment_Year
+COLUMN_ITEM_WEIGHT = "item_weight"
+COLUMN_ITEM_FAT_CONTENT = "item_fact_content"
+COLUMN_ITEM_VISIBILITY = "item_visibility"
+COLUMN_ITEM_TYPE = "item_type"
+COLUMN_ITEM_MRP ="item_mrp"
+COLUMN_ITEM_SIZE = "item_size"
+COLUMN_OUTLET_SIZE = "outlet_size"
+COLUMN_OUTLETLOCATION_TYPE = "outletlocation_type"
+COLUMN_OUTLET_TYPE = "outlet_type"
 DATASET_SCHEMA_COLUMNS_KEY=  "columns"
 
 NUMERICAL_COLUMN_KEY="numerical_columns"
 CATEGORICAL_COLUMN_KEY = "categorical_columns"
 
 
-TARGET_COLUMN_KEY="target_column"
+TARGET_COLUMN_KEY="Item_Outlet_Sales"
 
+#.......
+
+#Item_Weight                  0
+#Item_Fat_Content             0
+#Item_Visibility              0
+#Item_Type                    0
+#Item_MRP                     0
+
+#Outlet_Size                  0
+#Outlet_Location_Type         0
+#Outlet_Type                  0
+
+#.....
 
 # Model Training related variables
 

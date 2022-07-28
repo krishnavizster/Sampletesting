@@ -1,0 +1,1 @@
+[2022-07-28 00:15:12,636] INFO 130 configuration.py get_training_pipeline_config() Training pipleine config: TrainingPipelineConfig(artifact_dir='d:\\Storessalesproject\\storessales\\artifact')

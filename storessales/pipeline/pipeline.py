@@ -68,3 +68,6 @@ class pipeline:
             data_ingestion_artifact=self.start_data_ingestion()
         except Exception as e:
             raise StoressalesExeception(e,sys) from e
+
+
+            #data_ingestion

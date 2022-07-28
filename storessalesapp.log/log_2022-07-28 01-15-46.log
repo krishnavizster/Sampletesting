@@ -1,0 +1,33 @@
+[2022-07-28 01:15:49,596] INFO 130 configuration.py get_training_pipeline_config() Training pipleine config: TrainingPipelineConfig(artifact_dir='D:\\Storessalesproject\\storessales\\artifact')
+[2022-07-28 01:15:49,596] INFO 68 configuration.py get_data_ingestion_config() Data Ingestion config: DataIngestionConfig(dataset_download_url='https://github.com/krishnavizster/storedatatgz/raw/main/storessalesdata.tgz', tgz_download_dir='D:\\Storessalesproject\\storessales\\artifact\\data_ingestion\\2022-07-28-01-15-46\\tgz_data', raw_data_dir='D:\\Storessalesproject\\storessales\\artifact\\data_ingestion\\2022-07-28-01-15-46\\raw_data', ingested_train_dir='D:\\Storessalesproject\\storessales\\artifact\\data_ingestion\\2022-07-28-01-15-46\\ingested_data\\train', ingested_test_dir='D:\\Storessalesproject\\storessales\\artifact\\data_ingestion\\2022-07-28-01-15-46\\ingested_data\\test')
+[2022-07-28 01:15:49,596] INFO 21 data_injection.py __init__() >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-07-28 01:15:49,598] INFO 43 data_injection.py download_storessales_data() Downloading file from :[https://github.com/krishnavizster/storedatatgz/raw/main/storessalesdata.tgz] into :[D:\Storessalesproject\storessales\artifact\data_ingestion\2022-07-28-01-15-46\tgz_data\storessalesdata.tgz]
+[2022-07-28 01:15:51,406] INFO 45 data_injection.py download_storessales_data() File :[D:\Storessalesproject\storessales\artifact\data_ingestion\2022-07-28-01-15-46\tgz_data\storessalesdata.tgz] has been downloaded successfully.
+[2022-07-28 01:15:51,407] INFO 60 data_injection.py extract_tgz_file() Extracting tgz file: [D:\Storessalesproject\storessales\artifact\data_ingestion\2022-07-28-01-15-46\tgz_data\storessalesdata.tgz] into dir: [D:\Storessalesproject\storessales\artifact\data_ingestion\2022-07-28-01-15-46\raw_data]
+[2022-07-28 01:15:51,425] INFO 63 data_injection.py extract_tgz_file() Extraction completed
+[2022-07-28 01:15:51,425] INFO 77 data_injection.py split_data_as_train_test() Reading csv file: [D:\Storessalesproject\storessales\artifact\data_ingestion\2022-07-28-01-15-46\raw_data\storessalesdata.csv]
+[2022-07-28 01:15:51,502] INFO 87 data_injection.py split_data_as_train_test() Splitting data into train and test
+[2022-07-28 01:15:51,504] ERROR 16 demo.py main() 
+        Error occured in script: 
+        [ D:\Storessalesproject\storessales\pipeline\pipeline.py ] at 
+        try block line number: [68] and exception block line number: [70] 
+        error message: [
+        Error occured in script: 
+        [ D:\Storessalesproject\storessales\pipeline\pipeline.py ] at 
+        try block line number: [45] and exception block line number: [48] 
+        error message: [
+        Error occured in script: 
+        [ D:\Storessalesproject\storessales\component\data_injection.py ] at 
+        try block line number: [129] and exception block line number: [131] 
+        error message: [
+        Error occured in script: 
+        [ D:\Storessalesproject\storessales\component\data_injection.py ] at 
+        try block line number: [93] and exception block line number: [123] 
+        error message: [Input contains NaN, infinity or a value too large for dtype('float64').]
+        ]
+        ]
+        ]
+        
+[2022-07-28 01:15:51,531] INFO 136 data_injection.py __del__() >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
