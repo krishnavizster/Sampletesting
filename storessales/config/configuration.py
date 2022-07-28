@@ -1,11 +1,12 @@
+from storessales.config.configuration import Configuartion
 from ast import Pass
 from storessales.entity.config_entity import DataIngestionConfig, DataTransformationConfig,DataValidationConfig,   \
 ModelTrainerConfig,ModelEvaluationConfig,ModelPusherConfig,TrainingPipelineConfig
 from storessales.util.util import read_yaml_file
 from storessales import logger
 from storessales.logger import logging
-#import os
-#ROOT_DIR=os.getcwd()   #to get current working directory
+import os
+ROOT_DIR=os.getcwd()   #to get current working directory
 
 from storessales.constants import *
 from storessales.exeception import StoressalesExeception

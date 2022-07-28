@@ -9,8 +9,8 @@ import os
 
 def main():
     try:
-        pipeline1 = pipeline.pipeline()
-        pipeline1.run_pipeline()
+        pipeline = pipeline.pipeline()
+        pipeline.run_pipeline()
 
     except Exception as e:
         logging.error(f"{e}")
