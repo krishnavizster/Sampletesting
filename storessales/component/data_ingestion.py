@@ -76,8 +76,9 @@ class DataIngestion:
 
             logging.info(f"Reading csv file: [{storessales_file_path}]")
             storessales_data_frame = pd.read_csv(storessales_file_path)
+            storessales_data_frame.drop(['Item_Identifier', 'Outlet_Identifier'], axis=1, inplace=True)
 
-            storessales_data_frame["Outlet_Size"] = pd.cut(
+            storessales_data_frame["Outlet_Establishment_Year"] = pd.cut(
                 storessales_data_frame["Item_Outlet_Sales"],
                 bins=[0.0, 1.5, 3.0, 4.5, 6.0, np.inf],
                 labels=[1,2,3,4,5]
@@ -90,9 +91,9 @@ class DataIngestion:
 
             split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
 
-            for train_index,test_index in split.split(storessales_data_frame, storessales_data_frame["Outlet_Size"]):
-                strat_train_set = storessales_data_frame.loc[train_index].drop(["Outlet_Size"],axis=1)
-                strat_test_set = storessales_data_frame.loc[test_index].drop(["Outlet_Size"],axis=1)
+            for train_index,test_index in split.split(storessales_data_frame, storessales_data_frame["Outlet_Establishment_Year"]):
+                strat_train_set = storessales_data_frame.loc[train_index].drop(["Outlet_Establishment_Year"],axis=1)
+                strat_test_set = storessales_data_frame.loc[test_index].drop(["Outlet_Establishment_Year"],axis=1)
 
             train_file_path = os.path.join(self.data_ingestion_config.ingested_train_dir,
                                             file_name)
@@ -126,6 +127,7 @@ class DataIngestion:
         try:
             tgz_file_path =  self.download_storessales_data()
             self.extract_tgz_file(tgz_file_path=tgz_file_path)
+            
             return self.split_data_as_train_test()
         except Exception as e:
             raise StoressalesExeception(e,sys) from e
@@ -136,4 +138,3 @@ class DataIngestion:
         logging.info(f"{'>>'*20}Data Ingestion log completed.{'<<'*20} \n\n")
 
     #data_ingestion name changed 
-    
