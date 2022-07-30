@@ -73,6 +73,7 @@ COLUMN_OUTLET_SIZE = "outlet_size"
 COLUMN_OUTLETLOCATION_TYPE = "outletlocation_type"
 COLUMN_OUTLET_TYPE = "outlet_type"
 DATASET_SCHEMA_COLUMNS_KEY=  "columns"
+COLUMN_ITEMOUTLET_SALES="Item_Outlet_Sales"
 
 NUMERICAL_COLUMN_KEY="numerical_columns"
 CATEGORICAL_COLUMN_KEY = "categorical_columns"
