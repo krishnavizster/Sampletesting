@@ -12,18 +12,18 @@ import pandas as pd
 class StoressalesData:
 
     def __init__(self,
-                 Item_Identifier : str,
-                 Item_Weight : float,
-                 Item_Fat_Content  : str,
-                 Item_Visibility: float,
-                 Item_Type : str,
-                 Item_MRP: float,
-                 Outlet_Identifier: str,
-                 Outlet_Establishment_Year : int64,
-                 Outlet_Size : str,
-                 Outlet_Location_Type: str = None
-                 Outlet_Type : str,
-                 Item_Outlet_Sales :float,
+                Item_Identifier : str,
+                Item_Weight : float,
+                Item_Fat_Content  : str,
+                Item_Visibility: float,
+                Item_Type : str,
+                Item_MRP: float,
+                Outlet_Identifier: str,
+                Outlet_Establishment_Year : int64,
+                Outlet_Size : str,
+                Outlet_Location_Type: str = None
+                Outlet_Type : str,
+                Item_Outlet_Sales :float,
 
 
                  ):
