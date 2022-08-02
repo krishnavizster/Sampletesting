@@ -14,26 +14,7 @@ from storessales.pipeline.pipeline import Pipeline
 from storessales.entity.storessales_predictor import HousingPredictor, HousingData
 from flask import send_file, abort, render_template
 
-..........
-app=Flask(__name__)
 
-@app.route("/",methods=['GET','POST'])
-def index():
-    try:
-        raise Exception("we are testing custom exception")
-    except Exception as e:
-
-        storessales=StoressalesExeception(e,sys)
-
-
-        logging.info(storessales.error_message)
-
-        logging.info("first version storessales loggging message")
-    return "CI CD pipeline has been established for store sales predection"
-
-if __name__ == "__main__":
-    app.run(debug=True)
-..........................
 ROOT_DIR = os.getcwd()
 LOG_FOLDER_NAME = "logs"
 PIPELINE_FOLDER_NAME = "storessales"
@@ -127,28 +108,35 @@ def predict():
     }
 
     if request.method == 'POST':
-        longitude = float(request.form['longitude'])
-        latitude = float(request.form['latitude'])
-        housing_median_age = float(request.form['housing_median_age'])
-        total_rooms = float(request.form['total_rooms'])
-        total_bedrooms = float(request.form['total_bedrooms'])
-        population = float(request.form['population'])
-        households = float(request.form['households'])
-        median_income = float(request.form['median_income'])
-        ocean_proximity = request.form['ocean_proximity']
+        Item_Identifier = object(request.form[' Item_Identifier'])
+        Item_Weight = float(request.form['Item_Weight'])
+        Item_Fat_Content = object(request.form['Item_Fat_Content'])
+        Item_Visibility = float(request.form['Item_Visibility'])
+        Item_Type = object(request.form['Item_Type'])
+        Item_MRP = float(request.form['Item_MRP'])
+        Outlet_Identifier = object(request.form['Outlet_Identifier'])
+        Outlet_Establishment_Year= int(request.form['Outlet_Establishment_Year'])
+        Outlet_Size= object(request.form['Outlet_Size'])
+        Outlet_Location_Type= object(request.form['Outlet_Location_Type'])
+        Outlet_Type= object(request.form['Outlet_Type'])
+        Item_Outlet_Sales= float(request.form['Item_Outlet_Sales'])
 
-        housing_data = HousingData(longitude=longitude,
-                                   latitude=latitude,
-                                   housing_median_age=housing_median_age,
-                                   total_rooms=total_rooms,
-                                   total_bedrooms=total_bedrooms,
-                                   population=population,
-                                   households=households,
-                                   median_income=median_income,
-                                   ocean_proximity=ocean_proximity,
+
+        storessales_data = StoressalesData(Item_Identifier=Item_Identifier,
+                                   Item_Weight=Item_Weight,
+                                   Item_Fat_Content=Item_Fat_Content,
+                                   Item_Visibility=Item_Visibility,
+                                   Item_Type=Item_Type,
+                                   Item_MRP=Item_MRP,
+                                   Outlet_Identifier=Outlet_Identifier,
+                                   Outlet_Establishment_Year=Outlet_Establishment_Year,
+                                   Outlet_Size=Outlet_Size,
+                                   Outlet_Location_Type=Outlet_Location_Type,
+                                   Outlet_Type=Outlet_Type,
+                                   Item_Outlet_Sales=Item_Outlet_Sales
                                    )
         storessales_df = storessales_data.get_storessales_input_data_frame()
-        storessales_predictor = storessalesPredictor(model_dir=MODEL_DIR)
+        storessales_predictor = storessalespredictor(model_dir=MODEL_DIR)
         median_housing_value = storessales_predictor.predict(X=storessales_df)
         context = {
             STORESSALES_DATA_KEY: storessales_data.get_storessales_data_as_dict(),
