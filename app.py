@@ -8,7 +8,7 @@ from matplotlib.style import context
 from storessales.util.util import read_yaml_file, write_yaml_file
 import os, sys
 import json
-from storessales.config.configuration import Configuartion
+from storessales.config.configuration import configuartion
 from storessales.constants import CONFIG_DIR, get_current_time_stamp
 from storessales.pipeline.pipeline import Pipeline
 from storessales.entity.storessales_predictor import HousingPredictor, HousingData

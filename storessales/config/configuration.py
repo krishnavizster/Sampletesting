@@ -115,8 +115,7 @@ class Configuartion:
             data_transformation_artifact_dir=os.path.join(
                 artifact_dir,
                 DATA_TRANSFORMATION_ARTIFACT_DIR,
-                self.time_stamp
-            )
+                self.time_stamp)
 
             data_transformation_config_info=self.config_info[DATA_TRANSFORMATION_CONFIG_KEY]
 
@@ -217,7 +216,7 @@ class Configuartion:
             logging.info(f"Model pusher config {model_pusher_config}")
             return model_pusher_config
 
-    def get_training_pipeline_config(self) ->TrainingPipelineConfig:
+    def get_training_pipeline_config(self)->TrainingPipelineConfig:
         try:
             training_pipeline_config = self.config_info[TRAINING_PIPELINE_CONFIG_KEY]
             artifact_dir = os.path.join(ROOT_DIR,
