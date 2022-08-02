@@ -216,7 +216,7 @@ class Configuartion:
             logging.info(f"Model pusher config {model_pusher_config}")
             return model_pusher_config
 
-    def get_training_pipeline_config(self)->TrainingPipelineConfig:
+    def get_training_pipeline_config(self) ->TrainingPipelineConfig:
         try:
             training_pipeline_config = self.config_info[TRAINING_PIPELINE_CONFIG_KEY]
             artifact_dir = os.path.join(ROOT_DIR,
