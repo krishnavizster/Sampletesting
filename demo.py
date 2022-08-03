@@ -3,7 +3,7 @@ from storessales.exeception import StoressalesExeception
 from storessales.logger import logging
 from storessales.config.configuration import Configuartion
 from storessales.component.data_transformation import DataTransformation
-from storessales.exeception import HousingException
+from storessales.exeception import StoressalesException
 import os
 
 

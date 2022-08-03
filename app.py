@@ -11,7 +11,7 @@ import json
 from storessales.config.configuration import configuartion
 from storessales.constants import CONFIG_DIR, get_current_time_stamp
 from storessales.pipeline.pipeline import Pipeline
-from storessales.entity.storessales_predictor import HousingPredictor, HousingData
+from storessales.entity.storessales_predictor import StoressalesPredictor, StoressalesData
 from flask import send_file, abort, render_template
 
 
